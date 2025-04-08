@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MBA-Amri Consult</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Black White Minimalist Initials Monogram Jewelry Logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+                           .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Style des liens du menu */
+        .dropdown-menu .dropdown-item {
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background: #f8f9fa;
+            color: #007bff;
+        }
+
+        /* Style du sous-menu */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+            border-radius: 10px;
+        }
+
+        /* Effet au survol pour les sous-menus */
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+
+
+        #pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: auto;
+            background-color: #f9f9f9;
+        }
+
+        .pdf-container {
+            position: relative;
+        }
+
+        .pdf-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-pdf {
+            background-color: #002855;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-pdf:hover {
+            background-color: #001b3d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-pdf i {
+            font-size: 1.1rem;
+        }
+
+        .certificate-section {
+            padding: 80px 0;
+            background-color: #f9fafc;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title h1 {
+            color: #002855;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-right: 18%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #002855;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-description {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            #pdf-viewer {
+                height: 400px;
+            }
+            
+            .pdf-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="../index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <img class="" src="img/newlogo.png" alt="Icon" style="width: 105%; height: 413%; margin-top: 7%;">
+                    <h1 class="m-0 text-primary ms-2">MBA-Amri Consult</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <!-- Menu Principal -->
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="mainMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu shadow" aria-labelledby="mainMenu">
+                                <li><a class="dropdown-item" href="../index.html">Accueil</a></li>
+                                <li><a class="dropdown-item" href="about.html">À propos de nous</a></li>
+    
+                                <!-- Sous-menu Services -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Services</a>
+                                    <ul class="dropdown-menu shadow">
+                                        <li><a class="dropdown-item" href="property-list.html">ASSISTANCE ET ACCOMPAGNEMENT</a></li>
+                                        <li><a class="dropdown-item" href="property-type.html">FORMATION CONTINUE</a></li>
+                                        <li><a class="dropdown-item" href="property-agent.html">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="assets/temoignage.html">Témoignages et Remerciements</a></li>
+
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- class="display-5 animated fadeIn mb-4" -->
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 >Témoignages et Remerciements </h1> 
+                        <nav aria-label="breadcrumb animated fadeIn">
+                      
+                    </nav>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <img class="img-fluid" src="img/Formation.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+<!-- Certificate Section Start -->
+<section class="certificate-section">
+    <div class="container">
+        <div class="section-title">
+            <h1>Nos Attestations et Certificats</h1>
+        </div>
+        
+        <p class="section-description">
+            Consultez ci-dessous le document compilant l'ensemble de nos attestations et certificats de reconnaissance.
+            Vous pouvez naviguer dans le document et le télécharger pour consultation hors ligne.
+        </p>
+
+        <div class="pdf-container">
+            <div class="pdf-controls">
+                <button id="prev-page" class="btn-pdf">
+                <a href="../assets/img/attestations (8).pdf" download="Certificats_MBA_Amri_Conseil.pdf" class="btn-pdf">
+                    <i class="fas fa-download"></i> Télécharger
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="text-center mt-4">
+            <p>Pour toute demande d'informations supplémentaires concernant nos certifications, n'hésitez pas à <a href="contact.html">nous contacter</a>.</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Footer Start -->
+        <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <!-- <img
+              class="img-fluid"
+              src=""
+              alt="Icon"
+              style="width: 155px; height: 143px; margin-left: 8px"
+            /> -->
+
+            <h4 style="color: aliceblue; margin-top: -20px; margin-left: 8px">
+              MBA Amri Conseil
+            </h4>
+            <div class="col-lg-3 col-md-6">
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>AVENUE TAIEB MHIRI,
+                ARIANA CENTRE C315
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+216 53 589 224
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i> tunisiamba@gmail.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.facebook.com/tunisiamba/about/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Quick Links</h5>
+              <a class="btn btn-link text-white-50" href="">About Us</a>
+              <a class="btn btn-link text-white-50" href="">Contact Us</a>
+              <a class="btn btn-link text-white-50" href="">Our Services</a>
+              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+              <a class="btn btn-link text-white-50" href=""
+                >Terms & Condition</a
+              >
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4"></h5>
+              <p></p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">MBA Amri Conseil</a>,
+                All Right Reserved 2025 .
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        // Configure PDF.js worker path
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+        
+        // Initialize PDF variables
+        let pdfDoc = null,
+            pageNum = 1,
+            pageRendering = false,
+            pageNumPending = null,
+            scale = 1.5;
+        
+        // Get DOM elements
+        const pdfContainer = document.getElementById('pdf-viewer'),
+              pageNumElement = document.getElementById('page-num'),
+              prevPageButton = document.getElementById('prev-page'),
+              nextPageButton = document.getElementById('next-page');
+        
+        // Load the PDF
+        function loadPDF() {
+            // Path to your PDF file - make sure to place it in the correct directory
+            const url = 'assets/docs/attestations.pdf';
+            
+            // Asynchronously download PDF
+            pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+                pdfDoc = pdfDoc_;
+                pageNumElement.textContent = `Page 1 sur ${pdfDoc.numPages}`;
+                
+                // Initial/first page rendering
+                renderPage(1);
+            }).catch(function(error) {
+                // Display error message
+                pdfContainer.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>Erreur de chargement du PDF:</strong> ${error.message}
+                        <br><br>
+                        <a href="${url}" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Télécharger le PDF directement
+                        </a>
+                    </div>
+                `;
+            });
+        }
+        
+        // Render a page
+        function renderPage(num) {
+            pageRendering = true;
+            
+            // Using promise to fetch the page
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({ scale: scale });
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                // Clear the PDF container and append the canvas
+                pdfContainer.innerHTML = '';
+                pdfContainer.appendChild(canvas);
+                
+                // Render PDF page into canvas context
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                
+                const renderTask = page.render(renderContext);
+                
+                // Wait for rendering to finish
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        // New page rendering is pending
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+            
+            // Update page counters
+            pageNumElement.textContent = `Page ${num} sur ${pdfDoc.numPages}`;
+            pageNum = num;
+            
+            // Enable/disable buttons
+            prevPageButton.disabled = num <= 1;
+            nextPageButton.disabled = num >= pdfDoc.numPages;
+        }
+        
+        // Queue rendering of the previous page
+        function onPrevPage() {
+            if (pageNum <= 1) return;
+            if (pageRendering) {
+                pageNumPending = pageNum - 1;
+            } else {
+                renderPage(pageNum - 1);
+            }
+        }
+        
+        // Queue rendering of the next page
+        function onNextPage() {
+            if (pageNum >= pdfDoc.numPages) return;
+            if (pageRendering) {
+                pageNumPending = pageNum + 1;
+            } else {
+                renderPage(pageNum + 1);
+            }
+        }
+        
+        // Button event listeners
+        prevPageButton.addEventListener('click', onPrevPage);
+        nextPageButton.addEventListener('click', onNextPage);
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                onPrevPage();
+            } else if (e.key === 'ArrowRight') {
+                onNextPage();
+            }
+        });
+        
+        // Load the PDF when the page is loaded
+        window.addEventListener('load', loadPDF);
+    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
