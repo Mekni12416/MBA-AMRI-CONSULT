@@ -1,489 +1,905 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>MBA-Amri Consult</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Témoignages et Remerciements - MBA-Amri Consult</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="MBA-Amri Consult, témoignages, attestations, certificats"
+      name="keywords"
+    />
+    <meta
+      content="Découvrez nos attestations et certificats de reconnaissance"
+      name="description"
+    />
 
     <!-- Favicon -->
-    <link href="img/Black White Minimalist Initials Monogram Jewelry Logo.png" rel="icon">
+    <link
+      href="img/Black White Minimalist Initials Monogram Jewelry Logo.png"
+      rel="icon"
+    />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
     <style>
-                           .dropdown-menu {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-            transition: all 0.3s ease-in-out;
+      :root {
+        --primary-color: #002855;
+        --secondary-color: #f8f9fa;
+        --accent-color: #007bff;
+        --text-dark: #333;
+        --text-light: #666;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Heebo", sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Navigation Styles */
+      .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .navbar-brand h1 {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .dropdown-menu {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .dropdown-item {
+        padding: 12px 20px;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin: 2px 8px;
+      }
+
+      .dropdown-item:hover {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        color: white;
+        transform: translateX(5px);
+      }
+
+      /* Header Section */
+      .header {
+        margin-top: 13%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--accent-color) 100%
+        );
+        color: white;
+        padding: 100px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="1000,100 1000,0 0,100"/></svg>');
+        background-size: cover;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+      }
+
+      /* Certificates Gallery */
+      .certificates-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      /* Gallery Grid */
+      .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 60px;
+      }
+
+      .certificate-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        cursor: pointer;
+      }
+
+      .certificate-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .certificate-image {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+      }
+
+      .certificate-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.4s ease;
+      }
+
+      .certificate-card:hover .certificate-image img {
+        transform: scale(1.1);
+      }
+
+      .certificate-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 40, 85, 0.8),
+          rgba(0, 123, 255, 0.8)
+        );
+        opacity: 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .certificate-card:hover .certificate-overlay {
+        opacity: 1;
+      }
+
+      .overlay-content {
+        text-align: center;
+        color: white;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+      }
+
+      .certificate-card:hover .overlay-content {
+        transform: translateY(0);
+      }
+
+      .overlay-content i {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        opacity: 0.9;
+      }
+
+      .overlay-content p {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .certificate-info {
+        padding: 25px;
+        text-align: center;
+      }
+
+      .certificate-info h4 {
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      .certificate-info p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Modal Styles */
+      .modal-content {
+        border-radius: 20px;
+        border: none;
+        overflow: hidden;
+      }
+
+      .modal-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        color: white;
+        border: none;
+        padding: 20px 30px;
+      }
+
+      .modal-title {
+        font-weight: 600;
+      }
+
+      .btn-close {
+        filter: invert(1);
+      }
+
+      .modal-body {
+        padding: 0;
+      }
+
+      .modal-body img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Download Section */
+      .download-section {
+        background: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .download-btn {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        color: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+      }
+
+      .download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: white;
+      }
+
+      .download-btn i {
+        font-size: 1.2rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer h4 {
+        color: white;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+
+      .footer .btn-social {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .footer .btn-social:hover {
+        transform: translateY(-3px);
+        background: var(--accent-color);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.5rem;
         }
 
-        /* Style des liens du menu */
-        .dropdown-menu .dropdown-item {
-            padding: 10px 20px;
-            font-size: 16px;
-            transition: background 0.3s ease-in-out;
+        .section-title h2 {
+          font-size: 2.2rem;
         }
 
-        .dropdown-menu .dropdown-item:hover {
-            background: #f8f9fa;
-            color: #007bff;
+        .certificates-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
         }
 
-        /* Style du sous-menu */
-        .dropdown-submenu {
-            position: relative;
+        .certificate-card {
+          margin: 0 15px;
         }
+      }
 
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -1px;
-            border-radius: 10px;
+      /* Loading Animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        /* Effet au survol pour les sous-menus */
-        .dropdown-submenu:hover > .dropdown-menu {
-            display: block;
-        }
-
-
-
-        #pdf-viewer {
-            width: 100%;
-            height: 500px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            overflow: auto;
-            background-color: #f9f9f9;
-        }
-
-        .pdf-container {
-            position: relative;
-        }
-
-        .pdf-controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn-pdf {
-            background-color: #002855;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-pdf:hover {
-            background-color: #001b3d;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-pdf i {
-            font-size: 1.1rem;
-        }
-
-        .certificate-section {
-            padding: 80px 0;
-            background-color: #f9fafc;
-        }
-
-        .section-title {
-            position: relative;
-            margin-bottom: 60px;
-            text-align: center;
-        }
-
-        .section-title h1 {
-            color: #002855;
-            font-weight: 700;
-            margin-bottom: 20px;
-            margin-right: 18%;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background: #002855;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-description {
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            #pdf-viewer {
-                height: 400px;
-            }
-            
-            .pdf-controls {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
+      /* Stagger animation delays */
+      .certificate-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .certificate-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .certificate-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .certificate-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .certificate-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .certificate-card:nth-child(6) {
+        animation-delay: 0.6s;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg -top">
+      <div>
+        <img
+          src="img/LLOOGGOO-removebg-preview.png"
+          alt="Logo"
+          style="width: 25%; height: 30%; margin-right: 15px; margin-left: 60px"
+        />
+      </div>
+      <div class="container">
+        <a href="../index.html" class="navbar-brand d-flex align-items-center">
+          <h1 class="m-0">MBA-Amri Consult</h1>
+        </a>
 
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="../index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <img class="" src="img/newlogo.png" alt="Icon" style="width: 105%; height: 413%; margin-top: 7%;">
-                    <h1 class="m-0 text-primary ms-2">MBA-Amri Consult</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <!-- Menu Principal -->
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="mainMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
-                            <ul class="dropdown-menu shadow" aria-labelledby="mainMenu">
-                                <li><a class="dropdown-item" href="../index.html">Accueil</a></li>
-                                <li><a class="dropdown-item" href="about.html">À propos de nous</a></li>
-    
-                                <!-- Sous-menu Services -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Services</a>
-                                    <ul class="dropdown-menu shadow">
-                                        <li><a class="dropdown-item" href="property-list.html">ASSISTANCE ET ACCOMPAGNEMENT</a></li>
-                                        <li><a class="dropdown-item" href="property-type.html">FORMATION CONTINUE</a></li>
-                                        <li><a class="dropdown-item" href="property-agent.html">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="assets/temoignage.html">Témoignages et Remerciements</a></li>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
-
-        <!-- class="display-5 animated fadeIn mb-4" -->
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 >Témoignages et Remerciements </h1> 
-                        <nav aria-label="breadcrumb animated fadeIn">
-                      
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/Formation.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-
-
-<!-- Certificate Section Start -->
-<section class="certificate-section">
-    <div class="container">
-        <div class="section-title">
-            <h1>Nos Attestations et Certificats</h1>
-        </div>
-        
-        <p class="section-description">
-            Consultez ci-dessous le document compilant l'ensemble de nos attestations et certificats de reconnaissance.
-            Vous pouvez naviguer dans le document et le télécharger pour consultation hors ligne.
-        </p>
-
-        <div class="pdf-container">
-            <div class="pdf-controls">
-                <button id="prev-page" class="btn-pdf">
-                <a href="../assets/img/attestations (8).pdf" download="Certificats_MBA_Amri_Conseil.pdf" class="btn-pdf">
-                    <i class="fas fa-download"></i> Télécharger
-                </a>
-            </div>
-            
-        </div>
-
-        <div class="text-center mt-4">
-            <p>Pour toute demande d'informations supplémentaires concernant nos certifications, n'hésitez pas à <a href="contact.html">nous contacter</a>.</p>
-        </div>
-    </div>
-</section>
-
-        <!-- Footer Start -->
-        <div
-        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
-        <div class="container py-5">
-          <div class="row g-5">
-            <!-- <img
-              class="img-fluid"
-              src=""
-              alt="Icon"
-              style="width: 155px; height: 143px; margin-left: 8px"
-            /> -->
-
-            <h4 style="color: aliceblue; margin-top: -20px; margin-left: 8px">
-              MBA Amri Conseil
-            </h4>
-            <div class="col-lg-3 col-md-6">
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>AVENUE TAIEB MHIRI,
-                ARIANA CENTRE C315
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+216 53 589 224
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i> tunisiamba@gmail.com
-              </p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light btn-social"
-                  href="https://www.facebook.com/tunisiamba/about/"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Quick Links</h5>
-              <a class="btn btn-link text-white-50" href="">About Us</a>
-              <a class="btn btn-link text-white-50" href="">Contact Us</a>
-              <a class="btn btn-link text-white-50" href="">Our Services</a>
-              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-              <a class="btn btn-link text-white-50" href=""
-                >Terms & Condition</a
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
               >
-            </div>
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../index.html">Accueil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html"
+                    >À propos de nous</a
+                  >
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="property-list.html"
+                    >Assistance et Accompagnement</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="property-type.html"
+                    >Formation Continue</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="property-agent.html"
+                    >Étude de Diagnostic</a
+                  >
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4"></h5>
-              <p></p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
-              </div>
+    <!-- Header Section -->
+    <section class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="header-content">
+              <h1>Témoignages et Remerciements</h1>
+              <p>
+                Découvrez nos attestations et certificats de reconnaissance qui
+                témoignent de notre expertise et de la qualité de nos services.
+              </p>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="copyright">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">MBA Amri Conseil</a>,
-                All Right Reserved 2025 .
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <img
+              src="img/Formation.jpg"
+              alt="Formation"
+              class="img-fluid rounded-3 shadow-lg"
+            />
           </div>
         </div>
       </div>
-        <!-- Footer End -->
+    </section>
 
+    <!-- Certificates Section -->
+    <section class="certificates-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos Attestations et Certificats</h2>
+          <p class="section-subtitle">
+            Chaque attestation représente un témoignage de confiance et de
+            reconnaissance de notre travail. Cliquez sur une image pour
+            l'agrandir et découvrir les détails.
+          </p>
+        </div>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <div class="certificates-grid">
+          <!-- Certificate 1 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Attestation de Formation Professionnelle"
+          >
+            <div class="certificate-image">
+              <img src="./img/01.png" alt="Attestation 1" />
+            </div>
+            <div class="certificate-info">
+              <h4>Attestation de Formation Professionnelle</h4>
+              <p>
+                Reconnaissance de notre expertise en formation continue et
+                développement des compétences.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Certificat d'Excellence en Conseil"
+          >
+            <div class="certificate-image">
+              <img src="./img/02.png" alt="Attestation 2" />
+            </div>
+            <div class="certificate-info">
+              <h4>Certificat d'Excellence en Conseil</h4>
+              <p>
+                Récompense pour notre approche innovante en conseil et
+                accompagnement d'entreprises.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Attestation de Partenariat Stratégique"
+          >
+            <div class="certificate-image">
+              <img src="./img/03.png" alt="Attestation 3" />
+            </div>
+            <div class="certificate-info">
+              <h4>Attestation de Partenariat Stratégique</h4>
+              <p>
+                Reconnaissance de nos collaborations fructueuses avec des
+                institutions de renom.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 4 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Certificat de Qualité ISO"
+          >
+            <div class="certificate-image">
+              <img src="./img/04.png" alt="Attestation 4" />
+            </div>
+            <div class="certificate-info">
+              <h4>Certificat de Qualité ISO</h4>
+              <p>
+                Validation de nos processus qualité et de notre engagement
+                envers l'excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 5 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Attestation de Reconnaissance Gouvernementale"
+          >
+            <div class="certificate-image">
+              <img src="./img/05.png" alt="Attestation 5" />
+            </div>
+            <div class="certificate-info">
+              <h4>Attestation de Reconnaissance Gouvernementale</h4>
+              <p>
+                Reconnaissance officielle de notre contribution au développement
+                économique.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 6 -->
+          <div
+            class="certificate-card fade-in"
+            data-bs-toggle="modal"
+            data-bs-target="#certificateModal"
+            data-image="/placeholder.svg?height=400&width=600"
+            data-title="Certificat d'Innovation Technologique"
+          >
+            <div class="certificate-image">
+              <img src="./img/07.png" alt="Attestation 6" />
+            </div>
+            <div class="certificate-info">
+              <h4>Certificat d'Innovation Technologique</h4>
+              <p>
+                Récompense pour notre utilisation innovante des technologies
+                dans nos services.
+              </p>
+            </div>
+          </div>
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <!-- <section class="download-section"> -->
+    <!-- <div class="container"> -->
+    <!-- <h3 class="mb-4">Télécharger le Dossier Complet</h3> -->
+    <!-- <p class="mb-4">Obtenez l'ensemble de nos attestations et certificats dans un document PDF complet.</p> -->
+    <!-- <a href="../assets/img/attestations (8).pdf" download="Certificats_MBA_Amri_Conseil.pdf" class="download-btn"> -->
+    <!-- <i class="fas fa-download"></i> -->
+    <!-- Télécharger le PDF Complet -->
+    <!-- </a> -->
+    <!-- </div> -->
+    <!-- </section> -->
+
+    <!-- Modal for Certificate Viewing -->
+    <div class="modal fade" id="certificateModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Attestation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="modalImage"
+              src="/placeholder.svg"
+              alt="Certificate"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script>
-        // Configure PDF.js worker path
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
-        
-        // Initialize PDF variables
-        let pdfDoc = null,
-            pageNum = 1,
-            pageRendering = false,
-            pageNumPending = null,
-            scale = 1.5;
-        
-        // Get DOM elements
-        const pdfContainer = document.getElementById('pdf-viewer'),
-              pageNumElement = document.getElementById('page-num'),
-              prevPageButton = document.getElementById('prev-page'),
-              nextPageButton = document.getElementById('next-page');
-        
-        // Load the PDF
-        function loadPDF() {
-            // Path to your PDF file - make sure to place it in the correct directory
-            const url = 'assets/docs/attestations.pdf';
-            
-            // Asynchronously download PDF
-            pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-                pdfDoc = pdfDoc_;
-                pageNumElement.textContent = `Page 1 sur ${pdfDoc.numPages}`;
-                
-                // Initial/first page rendering
-                renderPage(1);
-            }).catch(function(error) {
-                // Display error message
-                pdfContainer.innerHTML = `
-                    <div class="alert alert-danger">
-                        <strong>Erreur de chargement du PDF:</strong> ${error.message}
-                        <br><br>
-                        <a href="${url}" download class="btn btn-primary">
-                            <i class="fas fa-download"></i> Télécharger le PDF directement
-                        </a>
-                    </div>
-                `;
-            });
-        }
-        
-        // Render a page
-        function renderPage(num) {
-            pageRendering = true;
-            
-            // Using promise to fetch the page
-            pdfDoc.getPage(num).then(function(page) {
-                const viewport = page.getViewport({ scale: scale });
-                const canvas = document.createElement('canvas');
-                const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-                
-                // Clear the PDF container and append the canvas
-                pdfContainer.innerHTML = '';
-                pdfContainer.appendChild(canvas);
-                
-                // Render PDF page into canvas context
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                
-                const renderTask = page.render(renderContext);
-                
-                // Wait for rendering to finish
-                renderTask.promise.then(function() {
-                    pageRendering = false;
-                    if (pageNumPending !== null) {
-                        // New page rendering is pending
-                        renderPage(pageNumPending);
-                        pageNumPending = null;
-                    }
-                });
-            });
-            
-            // Update page counters
-            pageNumElement.textContent = `Page ${num} sur ${pdfDoc.numPages}`;
-            pageNum = num;
-            
-            // Enable/disable buttons
-            prevPageButton.disabled = num <= 1;
-            nextPageButton.disabled = num >= pdfDoc.numPages;
-        }
-        
-        // Queue rendering of the previous page
-        function onPrevPage() {
-            if (pageNum <= 1) return;
-            if (pageRendering) {
-                pageNumPending = pageNum - 1;
-            } else {
-                renderPage(pageNum - 1);
-            }
-        }
-        
-        // Queue rendering of the next page
-        function onNextPage() {
-            if (pageNum >= pdfDoc.numPages) return;
-            if (pageRendering) {
-                pageNumPending = pageNum + 1;
-            } else {
-                renderPage(pageNum + 1);
-            }
-        }
-        
-        // Button event listeners
-        prevPageButton.addEventListener('click', onPrevPage);
-        nextPageButton.addEventListener('click', onNextPage);
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft') {
-                onPrevPage();
-            } else if (e.key === 'ArrowRight') {
-                onNextPage();
-            }
-        });
-        
-        // Load the PDF when the page is loaded
-        window.addEventListener('load', loadPDF);
-    </script>
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h4>MBA Amri Conseil</h4>
+            <p class="mb-3">
+              <i class="fa fa-map-marker-alt me-3"></i>AVENUE TAIEB MHIRI,
+              ARIANA CENTRE C315
+            </p>
+            <p class="mb-3">
+              <i class="fa fa-phone-alt me-3"></i>+216 53 589 224
+            </p>
+            <p class="mb-3">
+              <i class="fa fa-envelope me-3"></i>tunisiamba@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-outline-light btn-social"
+                href="https://www.facebook.com/tunisiamba/about/"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social" href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social" href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="col-lg-4"> -->
+            <!-- <h4>Liens Rapides</h4> -->
+            <!-- <a class="btn btn-link text-white-50" href="../index.html" -->
+              <!-- >Accueil</a -->
+            <!-- > -->
+            <!-- <a class="btn btn-link text-white-50" href="about.html">À propos</a> -->
+            <!-- <a class="btn btn-link text-white-50" href="contact.html" -->
+              <!-- >Contact</a -->
+            <!-- > -->
+            <!-- <a class="btn btn-link text-white-50" href="#">Nos Services</a> -->
+            <!-- <a class="btn btn-link text-white-50" href="#" -->
+              <!-- >Politique de Confidentialité</a -->
+            <!-- > -->
+          <!-- </div> -->
+          <div class="col-lg-4">
+            <h4>Newsletter</h4>
+            <p>Restez informé de nos dernières actualités et formations.</p>
+            <div class="position-relative">
+              <input
+                class="form-control bg-transparent border-light w-100 py-3 ps-4 pe-5"
+                type="email"
+                placeholder="Votre email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                S'inscrire
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p>&copy; 2025 MBA Amri Conseil. Tous droits réservés.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p>Conçu avec ❤️ pour l'excellence</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square position-fixed bottom-0 end-0 m-4"
+      style="z-index: 1000"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Modal functionality for certificate viewing
+      document.addEventListener("DOMContentLoaded", function () {
+        const certificateModal = document.getElementById("certificateModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+
+        certificateModal.addEventListener("show.bs.modal", function (event) {
+          const button = event.relatedTarget;
+          const imageSrc = button.getAttribute("data-image");
+          const title = button.getAttribute("data-title");
+
+          modalImage.src = imageSrc;
+          modalTitle.textContent = title;
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Back to top button functionality
+        const backToTopBtn = document.querySelector(".btn-lg-square");
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.animationPlayState = "running";
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          el.style.animationPlayState = "paused";
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
 </html>
