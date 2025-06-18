@@ -1,549 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>MBA-Amri Consult</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/Black White Minimalist Initials Monogram Jewelry Logo.png" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Continue - MBA Amri Consult</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-                           .dropdown-menu {
-            border-radius: 10px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-brand img {
+            width: 250px;
+            height: 250px;
+            margin-top: 20px;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .nav-link {
+            background: #f3f4f6;
             border: none;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Style des liens du menu */
-        .dropdown-menu .dropdown-item {
-            padding: 10px 20px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 16px;
-            transition: background 0.3s ease-in-out;
+            color: #374151;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
 
-        .dropdown-menu .dropdown-item:hover {
-            background: #f8f9fa;
-            color: #007bff;
+        .nav-link:hover {
+            background: #e5e7eb;
+            color: #2563eb;
         }
 
-        /* Style du sous-menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 320px;
+            z-index: 1000;
+            display: none;
+            padding: 8px 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 20px;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f8f9fa;
+        }
+
+        .dropdown-item:hover {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
         .dropdown-submenu {
             position: relative;
         }
 
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -1px;
-            border-radius: 10px;
+        .dropdown-submenu:hover .submenu {
+            display: block;
         }
 
-        /* Effet au survol pour les sous-menus */
-        .dropdown-submenu:hover > .dropdown-menu {
-            display: block;
+        .submenu {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 300px;
+            z-index: 1001;
+            display: none;
+            margin-right: 5px;
+            padding: 8px 0;
+        }
+
+        .submenu .dropdown-item {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .header-image {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Content Section */
+        .content-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-box h2 {
+            color: #2563eb;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .services-list li {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            margin: 8px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .services-list li:hover {
+            transform: translateX(10px);
+        }
+
+        .section-title {
+            color: #2563eb;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            text-align: center;
+        }
+
+        .subsection-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2rem;
+            margin: 25px 0 10px 0;
+        }
+
+        /* Formation Cards */
+        .formations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .formation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .formation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .formation-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .formation-card h6 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 50px 0 20px 0;
+        }
+
+        .footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer i {
+            color: #2563eb;
+            margin-right: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #2563eb;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            margin-top: 30px;
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .formations-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="img/LLOOGGOO-removebg-preview.png" alt="Logo">
+                <a href="../index.html" class="brand-name">MBA Amri Consult</a>
             </div>
-        </div>
-        <!-- Spinner End -->
 
-
-        <!-- Navbar Start -->
-        <!-- <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/logo_MBA_-_AMRI-removebg-preview.png" alt="Icon" style="width: 60px; height: 60px;">
-                    </div>
-                    <h1 class="m-0 text-primary">MBA-Amri Consult</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="dropdown">
+                <button class="nav-link">
+                    <span>Menu</span>
+                    <i class="fas fa-chevron-down"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="../index.html" class="nav-item nav-link">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link">A propos de nous</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">ASSISTANCE ET ACCOMPAGNEMENT</a>
-                                <a href="property-type.html" class="dropdown-item">FORMATION CONTINUE</a>
-                                <a href="property-agent.html" class="dropdown-item">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a>
-                            </div>
+                <div class="dropdown-menu">
+                    <a href="../index.html" class="dropdown-item">Accueil</a>
+                    <a href="about.html" class="dropdown-item">À propos de nous</a>
+                    
+                    <div class="dropdown-submenu">
+                        <a href="#" class="dropdown-item">
+                            Services <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <div class="submenu">
+                            <a href="property-list.html" class="dropdown-item">ASSISTANCE ET ACCOMPAGNEMENT</a>
+                            <a href="property-type.html" class="dropdown-item">FORMATION CONTINUE</a>
+                            <a href="property-agent.html" class="dropdown-item">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a>
                         </div>
-                        <div class="nav-item dropdown">
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Error</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>    width: 105%;
-    height: 413%;
-    margin-top: 5%;
-            </nav>
-        </div> -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="../index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <img class="" src="img/LLOOGGOO-removebg-preview.png" alt="Icon" style="width: 105%; height: 413%; margin-top: 7%;">
-                    <h1 class="m-0 text-primary ms-2">MBA-Amri Consult</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <!-- Menu Principal -->
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="mainMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
-                            <ul class="dropdown-menu shadow" aria-labelledby="mainMenu">
-                                <li><a class="dropdown-item" href="../index.html">Accueil</a></li>
-                                <li><a class="dropdown-item" href="about.html">À propos de nous</a></li>
-    
-                                <!-- Sous-menu Services -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Services</a>
-                                    <ul class="dropdown-menu shadow">
-                                        <li><a class="dropdown-item" href="property-list.html">ASSISTANCE ET ACCOMPAGNEMENT</a></li>
-                                        <li><a class="dropdown-item" href="property-type.html">FORMATION CONTINUE</a></li>
-                                        <li><a class="dropdown-item" href="property-agent.html">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="temoignage.html">Témoignages et Remerciements</a></li>
-
-                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
-
-        <!-- class="display-5 animated fadeIn mb-4" -->
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 >Formations Continue </h1> 
-                        <nav aria-label="breadcrumb animated fadeIn">
-                      
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/Formation.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-
-
-    
-        <!-- Search End -->
-        <div id="xxx" class="container py-5" style="background-color: #f7f1f1; border-radius: 15px; padding: 40px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); max-width: 900px; margin: auto; margin-top: 20px;">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        <span  style="font-weight: bold; color: #00223d;">MBA Consult</span> est un bureau agréé par l’état sous le numéro 12/642/15 pour exercer la formation continue depuis 2015, il a assuré la réalisation de plusieurs actions de formation en inter et en intra-entreprise.
-                    </p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        On propose à nos clients des thèmes de formation conçus et développés selon leurs besoins ainsi que nous mettons à leur disposition un catalogue de formation diversifié couvrant des domaines clés :
-                    </p>
-                    <ul style="list-style: none; padding-left: 0; text-align: left; display: inline-block;">
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Qualité (ISO 9001, ISO 21001, MARHBA)</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Santé et Sécurité au travail ISO 45001</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Environnement ISO 14001</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Responsabilité sociale SA 8000</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Anti-corruption ISO 37001</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Accréditation, Évaluation de la Conformité des produits et services</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Certification de gouvernance RNG</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Marquage CE</li>
-                        <li style="background: #678cf1; margin: 5px 0; padding: 10px; border-radius: 5px;">Gestion, finance et comptabilité</li>
-                    </ul>
-                    <h4  style="color: #00223d; font-weight: bold;; text-align: center">Nos Approches de Formation :</h4>
-                    <br>
-                    <p><strong>Formation sur mesure</strong></p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Cette offre vise l'acquisition et l’amélioration des compétences par des formations dont le contenu, la durée et les méthodes sont déterminés en fonction des besoins spécifiques de la clientèle.
-                    </p>
-                    <p><strong>Formations Inter/Intra</strong></p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        MBA Consult ouvre ses portes pour toute entreprise qui cherche des formations INTER ou INTRA pour ses employés.
-                    </p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Avec des horaires flexibles qui répondent aux besoins des entreprises, nous assurons des formations en INTRA sur mesure.
-                    </p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Nos méthodes d’enseignement comprennent des travaux pratiques en classe, des exemples vidéo, des études de cas, ainsi qu’un apprentissage guidé et structuré pour le développement en dehors de la salle de classe.
-                    </p>
-                    <p><strong>Formation certifiante</strong></p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Nos formations certifiantes sont conçues pour être parfaitement compatibles avec une activité professionnelle. Leur format adapté, e-learning ou sessions courtes planifiées sur l’année, permettent de concilier formation et activité professionnelle.
-                    </p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Nos formations, dispensées par des formateurs experts dans leurs domaines, assurent des sessions interactives basées sur des études de cas, des ateliers pratiques et des supports pédagogiques structurés. Chaque participant reçoit un certificat reconnu nationalement, garantissant la qualité et la pertinence des compétences acquises.
-                    </p>
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
-                        Avec MBA Consult, investissez dans une formation performante pour renforcer vos équipes et atteindre vos objectifs stratégiques.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        
-
-        
-        <!-- Category Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <!-- <h1 class="mb-3">Formations Continue</h1> -->
-                </div>
-
-
-
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/iso-9001 (1).jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur le Système de management de la qualité selon l’ISO 9001 version 2015</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/ISO_21001.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur le Système de management des organismes d'éducation/formation selon l’ISO 21001 (2018)</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/OIP.jpeg" alt="Icon">
-                                </div>
-                                <h6>Formation sur L’Approche processus, le tableau de bord et les indicateurs de performance</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/pm.jpeg" alt="Icon">
-                                </div>
-                                <h6>Formation sur la Gestion des Risques selon l’ISO 31000</h6>
-                            </div>
-                        </a>
                     </div>
                     
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/iso14.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur L’Audit interne selon l’ISO 19011</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/th.jpeg" alt="Icon">
-                                </div>
-                                <h6>Formation sur L’outil 5S</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/ISO14001-1-1024x838.png" alt="Icon">
-                                </div>
-                                <h6>Formation sur les exigences de Système de management environnemental selon l’ISO 14001</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/ISO_45001.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur le Système Santé et Sécurité au Travail selon l’ISO 45001</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/OIP copy.jpeg" alt="Icon">
-                                </div>
-                                <h6>Formation sur Les exigences de Référentiel National de la Gouvernance Tunisien (RNGT)</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/satisfaction-ca.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur la Satisfaction des clients et le traitement des réclamation</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/images.jpeg" alt="Icon">
-                                </div>
-                                <h6>Formation sur l’Analyse des Modes de Défaillance, Leurs Effets et de leurs Criticité
-                                    (AMDEC)</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/ISO37001-zylloo-edited.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur le Système de Management Anti- Corruption selon l’ISO 37001</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/gabes-le-label-marhba-en-atelier.jpg" alt="Icon">
-                                </div>
-                                <h6>Formation sur Label « MARHBA » pour la qualité d’accueil</h6>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-
-
-
-
-
-
-                 
-
-
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/con.png" alt="Icon">
-                                </div>
-                                <h6>Formation sur le Traitement des non-conformités et l’amélioration continue/ Méthode de
-                                    résolution du problème par groupe</h6>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-
-
-
-
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-                            <div class="rounded p-4">
-                                <div class="icon mb-3">
-                                    <img class="img-fluid" src="img/statistique.png" alt="Icon">
-                                </div>
-                                <h6>Formation sur l’Analyse de données & SPSS</h6>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-
-
-
-
-                 
-
-
-
-                   
-
-
-
-
-                  
-
-
-
-
-                   
-
+                    <a href="temoignage.html" class="dropdown-item">Témoignages et Remerciements</a>
+                    <a href="contact.html" class="dropdown-item">Contact</a>
                 </div>
             </div>
         </div>
-        <!-- Category End -->
-        
+    </nav>
 
-
-        <!-- Footer Start -->
-        <div
-        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
-        <div class="container py-5">
-          <div class="row g-5">
-            <!-- <img
-              class="img-fluid"
-              src=""
-              alt="Icon"
-              style="width: 155px; height: 143px; margin-left: 8px"
-            /> -->
-
-            <h4 style="color: aliceblue; margin-top: -20px; margin-left: 8px">
-              MBA Amri Conseil
-            </h4>
-            <div class="col-lg-3 col-md-6">
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>AVENUE TAIEB MHIRI,
-                ARIANA CENTRE C315
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+216 53 589 224
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i> tunisiamba@gmail.com
-              </p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light btn-social"
-                  href="https://www.facebook.com/tunisiamba/about/"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Quick Links</h5>
-              <a class="btn btn-link text-white-50" href="">About Us</a>
-              <a class="btn btn-link text-white-50" href="">Contact Us</a>
-              <a class="btn btn-link text-white-50" href="">Our Services</a>
-              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-              <a class="btn btn-link text-white-50" href=""
-                >Terms & Condition</a
-              >
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4"></h5>
-              <p></p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Header -->
+    <section class="header">
         <div class="container">
-          <div class="copyright">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">MBA Amri Conseil</a>,
-                All Right Reserved 2025 .
-              </div>
-            </div>
-          </div>
+            <h1>Formation Continue</h1>
+            <img src="img/Formation.jpg" alt="Formation" class="header-image">
         </div>
-      </div>
-        <!-- Footer End -->
+    </section>
 
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-box">
+                <p>
+                    <span class="highlight">MBA Consult</span> est un bureau agréé par l'état sous le numéro 12/642/15 pour exercer la formation continue depuis 2015, il a assuré la réalisation de plusieurs actions de formation en inter et en intra-entreprise.
+                </p>
+                <p>
+                    On propose à nos clients des thèmes de formation conçus et développés selon leurs besoins ainsi que nous mettons à leur disposition un catalogue de formation diversifié couvrant des domaines clés :
+                </p>
+                
+                <ul class="services-list">
+                    <li>Qualité (ISO 9001, ISO 21001, MARHBA)</li>
+                    <li>Santé et Sécurité au travail ISO 45001</li>
+                    <li>Environnement ISO 14001</li>
+                    <li>Responsabilité sociale SA 8000</li>
+                    <li>Anti-corruption ISO 37001</li>
+                    <li>Accréditation, Évaluation de la Conformité des produits et services</li>
+                    <li>Certification de gouvernance RNG</li>
+                    <li>Marquage CE</li>
+                    <li>Gestion, finance et comptabilité</li>
+                </ul>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+                <h3 class="section-title">Nos Approches de Formation :</h3>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                <div class="subsection-title">Formation sur mesure</div>
+                <p>
+                    Cette offre vise l'acquisition et l'amélioration des compétences par des formations dont le contenu, la durée et les méthodes sont déterminés en fonction des besoins spécifiques de la clientèle.
+                </p>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                <div class="subsection-title">Formations Inter/Intra</div>
+                <p>
+                    MBA Consult ouvre ses portes pour toute entreprise qui cherche des formations INTER ou INTRA pour ses employés.
+                </p>
+                <p>
+                    Avec des horaires flexibles qui répondent aux besoins des entreprises, nous assurons des formations en INTRA sur mesure.
+                </p>
+                <p>
+                    Nos méthodes d'enseignement comprennent des travaux pratiques en classe, des exemples vidéo, des études de cas, ainsi qu'un apprentissage guidé et structuré pour le développement en dehors de la salle de classe.
+                </p>
+
+                <div class="subsection-title">Formation certifiante</div>
+                <p>
+                    Nos formations certifiantes sont conçues pour être parfaitement compatibles avec une activité professionnelle. Leur format adapté, e-learning ou sessions courtes planifiées sur l'année, permettent de concilier formation et activité professionnelle.
+                </p>
+                <p>
+                    Nos formations, dispensées par des formateurs experts dans leurs domaines, assurent des sessions interactives basées sur des études de cas, des ateliers pratiques et des supports pédagogiques structurés. Chaque participant reçoit un certificat reconnu nationalement, garantissant la qualité et la pertinence des compétences acquises.
+                </p>
+                <p>
+                    Avec MBA Consult, investissez dans une formation performante pour renforcer vos équipes et atteindre vos objectifs stratégiques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Grid -->
+    <section>
+        <div class="formations-grid">
+            <a href="#" class="formation-card">
+                <img src="img/iso-9001 (1).jpg" alt="ISO 9001">
+                <h6>Formation sur le Système de management de la qualité selon l'ISO 9001 version 2015</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/ISO_21001.jpg" alt="ISO 21001">
+                <h6>Formation sur le Système de management des organismes d'éducation/formation selon l'ISO 21001 (2018)</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/OIP.jpeg" alt="Processus">
+                <h6>Formation sur L'Approche processus, le tableau de bord et les indicateurs de performance</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/pm.jpeg" alt="Gestion des risques">
+                <h6>Formation sur la Gestion des Risques selon l'ISO 31000</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/iso14.jpg" alt="Audit interne">
+                <h6>Formation sur L'Audit interne selon l'ISO 19011</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/th.jpeg" alt="5S">
+                <h6>Formation sur L'outil 5S</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/ISO14001-1-1024x838.png" alt="ISO 14001">
+                <h6>Formation sur les exigences de Système de management environnemental selon l'ISO 14001</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/ISO_45001.jpg" alt="ISO 45001">
+                <h6>Formation sur le Système Santé et Sécurité au Travail selon l'ISO 45001</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/OIP copy.jpeg" alt="RNGT">
+                <h6>Formation sur Les exigences de Référentiel National de la Gouvernance Tunisien (RNGT)</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/satisfaction-ca.jpg" alt="Satisfaction client">
+                <h6>Formation sur la Satisfaction des clients et le traitement des réclamation</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/images.jpeg" alt="AMDEC">
+                <h6>Formation sur l'Analyse des Modes de Défaillance, Leurs Effets et de leurs Criticité (AMDEC)</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/ISO37001-zylloo-edited.jpg" alt="ISO 37001">
+                <h6>Formation sur le Système de Management Anti-Corruption selon l'ISO 37001</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/gabes-le-label-marhba-en-atelier.jpg" alt="MARHBA">
+                <h6>Formation sur Label « MARHBA » pour la qualité d'accueil</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/con.png" alt="Non-conformités">
+                <h6>Formation sur le Traitement des non-conformités et l'amélioration continue/ Méthode de résolution du problème par groupe</h6>
+            </a>
+
+            <a href="#" class="formation-card">
+                <img src="img/statistique.png" alt="SPSS">
+                <h6>Formation sur l'Analyse de données & SPSS</h6>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div>
+                    <h4>MBA Amri Conseil</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>AVENUE TAIEB MHIRI, ARIANA CENTRE C315</p>
+                    <p><i class="fas fa-phone"></i>+216 53 589 224</p>
+                    <p><i class="fas fa-envelope"></i>tunisiamba@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Liens Rapides</h4>
+                    <p><a href="../index.html" style="color: #ccc; text-decoration: none;">Accueil</a></p>
+                    <p><a href="about.html" style="color: #ccc; text-decoration: none;">À propos</a></p>
+                    <p><a href="#" style="color: #ccc; text-decoration: none;">Services</a></p>
+                    <p><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MBA Amri Conseil. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
