@@ -1,563 +1,618 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-STME6H586P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-STME6H586P");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Étude de Diagnostic de Mise à Niveau - MBA Amri Conseil</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
 
-        /* Navigation Styles */
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1000;
-        }
+      /* Navigation Styles */
+      .navbar {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1000;
+      }
 
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .nav-brand img {
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+      }
+
+      .brand-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .nav-link {
+        background: #f3f4f6;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        color: #374151;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        background: #e5e7eb;
+        color: #2563eb;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        min-width: 320px;
+        z-index: 1000;
+        display: none;
+        padding: 8px 0;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-item {
+        display: block;
+        padding: 12px 20px;
+        color: #374151;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #f8f9fa;
+      }
+
+      .dropdown-item:hover {
+        background: #dbeafe;
+        color: #2563eb;
+      }
+
+      .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropdown-submenu:hover .submenu {
+        display: block;
+      }
+
+      .submenu {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        min-width: 300px;
+        z-index: 1001;
+        display: none;
+        margin-right: 5px;
+        padding: 8px 0;
+      }
+
+      .submenu .dropdown-item {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      /* Header Section */
+      .header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        padding: 80px 0;
+      }
+
+      .header-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .header-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Content Section */
+      .content-section {
+        background: #f8fafc;
+        padding: 80px 0;
+      }
+
+      .content-box {
+        background: white;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .content-box h2 {
+        color: #1e40af;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .content-box h3 {
+        color: #1e40af;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .content-box h4 {
+        color: #1e40af;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 20px 0 10px;
+      }
+
+      .content-box p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .services-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        display: grid;
+        gap: 15px;
+      }
+
+      .services-list li {
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        color: white;
+        padding: 18px 25px;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      }
+
+      .services-list li:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+      }
+
+      .content-description {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        margin: 30px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* Footer */
+      .footer {
+        background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+        color: #ccc;
+        padding: 60px 0 30px 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer h4 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+      }
+
+      .footer p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .footer i {
+        color: #3b82f6;
+        margin-right: 12px;
+        width: 20px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        font-size: 18px;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 5px 0;
+      }
+
+      .footer-links a:hover {
+        color: #3b82f6;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid #444;
+        margin-top: 40px;
+        color: #888;
+      }
+
+      .email-signup {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .email-signup input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #444;
+        border-radius: 8px 0 0 8px;
+        background: #333;
+        color: white;
+      }
+
+      .email-signup button {
+        padding: 12px 20px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        color: white;
+        border: none;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .email-signup button:hover {
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+      }
+
+      /* Spinner */
+      .spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        border: 4px solid #f3f4f6;
+        border-top: 4px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .nav-brand img {
-            width: 250px;
-            height: 250px;
-            margin-top: 20px;
-        }
-
-        .brand-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2563eb;
-            margin: 0;
-            text-decoration: none;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .nav-link {
-            background: #f3f4f6;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            color: #374151;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            background: #e5e7eb;
-            color: #2563eb;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            min-width: 320px;
-            z-index: 1000;
-            display: none;
-            padding: 8px 0;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-item {
-            display: block;
-            padding: 12px 20px;
-            color: #374151;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid #f8f9fa;
-        }
-
-        .dropdown-item:hover {
-            background: #dbeafe;
-            color: #2563eb;
-        }
-
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu:hover .submenu {
-            display: block;
-        }
-
-        .submenu {
-            position: absolute;
-            top: 0;
-            right: 100%;
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            min-width: 300px;
-            z-index: 1001;
-            display: none;
-            margin-right: 5px;
-            padding: 8px 0;
-        }
-
-        .submenu .dropdown-item {
-            font-size: 14px;
-            padding: 10px 20px;
-        }
-
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 80px 0;
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
         }
 
         .header-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          grid-template-columns: 1fr;
+          text-align: center;
         }
 
         .header h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .header-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Content Section */
-        .content-section {
-            background: #f8fafc;
-            padding: 80px 0;
+          font-size: 2.5rem;
         }
 
         .content-box {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .content-box h2 {
-            color: #1e40af;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .content-box h3 {
-            color: #1e40af;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .content-box h4 {
-            color: #1e40af;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 20px 0 10px;
-        }
-
-        .content-box p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            display: grid;
-            gap: 15px;
-        }
-
-        .services-list li {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            padding: 18px 25px;
-            border-radius: 10px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-
-        .services-list li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-
-        .content-description {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
-            margin: 30px 0;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            color: #ccc;
-            padding: 60px 0 30px 0;
+          padding: 30px 20px;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          grid-template-columns: 1fr;
+          text-align: center;
         }
-
-        .footer h4 {
-            color: white;
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-        }
-
-        .footer p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .footer i {
-            color: #3b82f6;
-            margin-right: 12px;
-            width: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            text-align: center;
-            line-height: 45px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: block;
-            padding: 5px 0;
-        }
-
-        .footer-links a:hover {
-            color: #3b82f6;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid #444;
-            margin-top: 40px;
-            color: #888;
-        }
-
-        .email-signup {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .email-signup input {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid #444;
-            border-radius: 8px 0 0 8px;
-            background: #333;
-            color: white;
-        }
-
-        .email-signup button {
-            padding: 12px 20px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            border: none;
-            border-radius: 0 8px 8px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .email-signup button:hover {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-        }
-
-        /* Spinner */
-        .spinner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .spinner-border {
-            width: 3rem;
-            height: 3rem;
-            border: 4px solid #f3f4f6;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                height: auto;
-                padding: 20px;
-            }
-
-            .header-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .content-box {
-                padding: 30px 20px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Spinner -->
     <div class="spinner" id="spinner">
-        <div class="spinner-border"></div>
+      <div class="spinner-border"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="img/LLOOGGOO-removebg-preview.png" alt="Logo">
-                <a href="../index.html" class="brand-name">MBA Amri Consult</a>
-            </div>
-
-            <div class="dropdown">
-                <button class="nav-link">
-                    <span>Menu</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu">
-                    <a href="../index.html" class="dropdown-item">Accueil</a>
-                    <a href="about.html" class="dropdown-item">À propos de nous</a>
-                    <div class="dropdown-submenu">
-                        <a href="#" class="dropdown-item">
-                            Services <i class="fas fa-chevron-right"></i>
-                        </a>
-                        <div class="submenu">
-                            <a href="property-list.html" class="dropdown-item">ASSISTANCE ET ACCOMPAGNEMENT</a>
-                            <a href="property-type.html" class="dropdown-item">FORMATION CONTINUE</a>
-                            <a href="property-agent.html" class="dropdown-item">ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a>
-                        </div>
-                    </div>
-                    <a href="temoignage.html" class="dropdown-item">Témoignages et Remerciements</a>
-                    <a href="contact.html" class="dropdown-item">Contact</a>
-                </div>
-            </div>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <img src="img/LLOOGGOO-removebg-preview.png" alt="Logo" />
+          <a href="../index.html" class="brand-name">MBA Amri Consult</a>
         </div>
+
+        <div class="dropdown">
+          <button class="nav-link">
+            <span>Menu</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-item">Accueil</a>
+            <a href="about.html" class="dropdown-item">À propos de nous</a>
+            <div class="dropdown-submenu">
+              <a href="#" class="dropdown-item">
+                Services <i class="fas fa-chevron-right"></i>
+              </a>
+              <div class="submenu">
+                <a href="property-list.html" class="dropdown-item"
+                  >ASSISTANCE ET ACCOMPAGNEMENT</a
+                >
+                <a href="property-type.html" class="dropdown-item"
+                  >FORMATION CONTINUE</a
+                >
+                <a href="property-agent.html" class="dropdown-item"
+                  >ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</a
+                >
+              </div>
+            </div>
+            <a href="temoignage.html" class="dropdown-item"
+              >Témoignages et Remerciements</a
+            >
+            <a href="contact.html" class="dropdown-item">Contact</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- Header -->
     <section class="header">
-        <div class="header-content">
-            <div>
-                <h1>ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</h1>
-            </div>
-            <div>
-                <img src="img/diagnostic mise à niveau.jpg" alt="Diagnostic" class="header-image">
-            </div>
+      <div class="header-content">
+        <div>
+          <h1>ÉTUDE DE DIAGNOSTIC DE MISE À NIVEAU</h1>
         </div>
+        <div>
+          <img
+            src="img/diagnostic mise à niveau.jpg"
+            alt="Diagnostic"
+            class="header-image"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Content Section -->
     <section class="content-section">
-        <div class="container">
-            <div class="content-box">
-                <h2>Étude de Diagnostic de Mise à Niveau</h2>
-                <p>
-                    La mise à niveau des entreprises tunisiennes est une opportunité pour identifier les axes 
-                    d'amélioration et les investissements nécessaires au développement et à la compétitivité des entreprises.
-                </p>
-                <p>
-                    MBA Amri Consult propose une assistance complète : depuis l'adhésion au programme, la réalisation du diagnostic, 
-                    le dépôt du rapport, jusqu’au suivi du déblocage des remboursements. Notre équipe d'experts polyvalents offre 
-                    des services adaptés aux besoins des entreprises dans tous les domaines d'activité.
-                </p>
-                <h3>Objectifs</h3>
-                <ul class="services-list">
-                    <li>Améliorer le positionnement compétitif des entreprises.</li>
-                    <li>Doter les entreprises de moyens pour résister à la concurrence locale et internationale.</li>
-                    <li>Contribuer à l’effort d’exportation.</li>
-                    <li>Moderniser les moyens de production et adopter les nouvelles technologies.</li>
-                </ul>
-                <h3>Actions</h3>
-                <h4>Investissements matériels :</h4>
-                <ul class="services-list">
-                    <li>Acquisition de matériel et équipements.</li>
-                    <li>Matériel informatique.</li>
-                    <li>Matériel de contrôle et de laboratoire.</li>
-                    <li>Matériel de R&D.</li>
-                </ul>
-                <h4>Investissements immatériels :</h4>
-                <ul class="services-list">
-                    <li>Les TIC : logiciels (ERP, GPAO, CAO-DAO, GMAO, etc.).</li>
-                    <li>Actions de transfert de compétences : SMQ, ISO, BRC, marketing, productivité.</li>
-                    <li>Études préalables aux investissements matériels.</li>
-                    <li>Formation et qualification des ressources humaines.</li>
-                    <li>Études sur l’organisation de l’entreprise.</li>
-                    <li>Transfert de technologie, acquisition de brevets ou licences.</li>
-                    <li>Recrutement de cadres dans les fonctions technologiques.</li>
-                    <li>Mise en place de bureaux d’études et de méthodes.</li>
-                </ul>
-                <p class="content-description">
-                    Ensemble, développons votre entreprise et relevons les défis d'aujourd'hui et de demain !
-                </p>
-            </div>
+      <div class="container">
+        <div class="content-box">
+          <h2>Étude de Diagnostic de Mise à Niveau</h2>
+          <p>
+            La mise à niveau des entreprises tunisiennes est une opportunité
+            pour identifier les axes d'amélioration et les investissements
+            nécessaires au développement et à la compétitivité des entreprises.
+          </p>
+          <p>
+            MBA Amri Consult propose une assistance complète : depuis l'adhésion
+            au programme, la réalisation du diagnostic, le dépôt du rapport,
+            jusqu’au suivi du déblocage des remboursements. Notre équipe
+            d'experts polyvalents offre des services adaptés aux besoins des
+            entreprises dans tous les domaines d'activité.
+          </p>
+          <h3>Objectifs</h3>
+          <ul class="services-list">
+            <li>Améliorer le positionnement compétitif des entreprises.</li>
+            <li>
+              Doter les entreprises de moyens pour résister à la concurrence
+              locale et internationale.
+            </li>
+            <li>Contribuer à l’effort d’exportation.</li>
+            <li>
+              Moderniser les moyens de production et adopter les nouvelles
+              technologies.
+            </li>
+          </ul>
+          <h3>Actions</h3>
+          <h4>Investissements matériels :</h4>
+          <ul class="services-list">
+            <li>Acquisition de matériel et équipements.</li>
+            <li>Matériel informatique.</li>
+            <li>Matériel de contrôle et de laboratoire.</li>
+            <li>Matériel de R&D.</li>
+          </ul>
+          <h4>Investissements immatériels :</h4>
+          <ul class="services-list">
+            <li>Les TIC : logiciels (ERP, GPAO, CAO-DAO, GMAO, etc.).</li>
+            <li>
+              Actions de transfert de compétences : SMQ, ISO, BRC, marketing,
+              productivité.
+            </li>
+            <li>Études préalables aux investissements matériels.</li>
+            <li>Formation et qualification des ressources humaines.</li>
+            <li>Études sur l’organisation de l’entreprise.</li>
+            <li>
+              Transfert de technologie, acquisition de brevets ou licences.
+            </li>
+            <li>Recrutement de cadres dans les fonctions technologiques.</li>
+            <li>Mise en place de bureaux d’études et de méthodes.</li>
+          </ul>
+          <p class="content-description">
+            Ensemble, développons votre entreprise et relevons les défis
+            d'aujourd'hui et de demain !
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h4>MBA Amri Consult</h4>
-                <p><i class="fas fa-map-marker-alt"></i>AVENUE TAIEB MHIRI, ARIANA CENTRE C315</p>
-                <p><i class="fas fa-phone"></i>+216 53 589 224</p>
-                <p><i class="fas fa-envelope"></i>tunisiamba@gmail.com</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/tunisiamba"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/mba-amri-consult-98507b34b/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4>Liens Rapides</h4>
-                <div class="footer-links">
-                    <a href="../index.html">Accueil</a>
-                    <a href="about.html">À propos</a>
-                    <a href="#">Services</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <div>
-                <h4>Newsletter</h4>
-                <p>Restez informé de nos dernières actualités</p>
-                <div class="email-signup">
-                    <input type="email" placeholder="Votre email">
-                    <button type="button">S'abonner</button>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div>
+          <h4>MBA Amri Consult</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>AVENUE TAIEB MHIRI, ARIANA
+            CENTRE C315
+          </p>
+          <p><i class="fas fa-phone"></i>+216 53 589 224</p>
+          <p><i class="fas fa-envelope"></i>tunisiamba@gmail.com</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/tunisiamba"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/mba-amri-consult-98507b34b/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        <div class="copyright">
-            <p>© 2025 MBA Amri Consult. Tous droits réservés.</p>
+        <div>
+          <h4>Liens Rapides</h4>
+          <div class="footer-links">
+            <a href="../index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="#">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Restez informé de nos dernières actualités</p>
+          <div class="email-signup">
+            <input type="email" placeholder="Votre email" />
+            <button type="button">S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 MBA Amri Consult. Tous droits réservés.</p>
+      </div>
     </footer>
 
     <script>
-        // Masquer le spinner après le chargement
-        window.addEventListener('load', function() {
-            document.getElementById('spinner').style.display = 'none';
-        });
+      // Masquer le spinner après le chargement
+      window.addEventListener("load", function () {
+        document.getElementById("spinner").style.display = "none";
+      });
     </script>
-</body>
+  </body>
 </html>
